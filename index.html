@@ -4,35 +4,43 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rakshit Vahi Portfolio</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <!-- Navbar -->
-  <nav class="navbar">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
     <div class="container">
-      <a href="#" class="logo">Rakshit Vahi</a>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#work">Work</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+      <a class="navbar-brand" href="#">Rakshit Vahi</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#work">Work</a></li>
+          <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
     </div>
   </nav>
 
   <!-- Hero Section -->
-  <header class="hero">
-    <div class="container">
+  <header class="hero text-center text-white d-flex align-items-center justify-content-center">
+    <div>
       <h1>Hi, I'm Rakshit Vahi</h1>
       <p id="typing-text"></p>
     </div>
   </header>
 
   <!-- About Section -->
-  <section id="about" class="about">
+  <section id="about" class="py-5">
     <div class="container">
-      <h2>About Me</h2>
-      <p>
+      <h2 class="text-center">About Me</h2>
+      <p class="text-center">
         I am a passionate Software Engineer and Product Manager in training with experience in Agile methodologies,
         backend development, and CI/CD automation. I strive to create impactful solutions by blending technical expertise and business insights.
       </p>
@@ -40,15 +48,80 @@
   </section>
 
   <!-- Work Experience Section -->
-  <section id="work" class="work">
+  <section id="work" class="py-5 bg-light">
     <div class="container">
-      <h2>Work Experience</h2>
-      <div class="card">
-        <h3>Lead Graduate Assistant</h3>
-        <p>Northeastern University</p>
+      <h2 class="text-center">Work Experience</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Lead Graduate Assistant</h5>
+              <p class="card-text">Northeastern University</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Software Engineer</h5>
+              <p class="card-text">GE Healthcare, India</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Software Engineering Specialist</h5>
+              <p class="card-text">GE Healthcare, India</p>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="card">
-        <h3>Software Engineer</h3>
-        <p>GE Healthcare, India</p>
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section id="education" class="py-5">
+    <div class="container">
+      <h2 class="text-center">Education</h2>
+      <div class="row g-4">
+        <div class="col-md-6">
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Master of Science in Engineering Management</h5>
+              <p class="card-text">Northeastern University</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Bachelor of Engineering in Computer Science</h5>
+              <p class="card-text">PES Institute of Technology, India</p>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="card">
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-5 bg-light">
+    <div class="container text-center">
+      <h2>Contact Me</h2>
+      <a href="https://linkedin.com/in/rakshit-vahi" class="btn btn-primary m-2" target="_blank">LinkedIn</a>
+      <a href="mailto:vahi.r@northeastern.edu" class="btn btn-secondary m-2">Email</a>
+      <a href="https://github.com/RakshitVahi" class="btn btn-dark m-2" target="_blank">GitHub</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-primary text-white text-center py-3">
+    <p>© 2024 Rakshit Vahi. All rights reserved.</p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
