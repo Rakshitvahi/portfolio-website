@@ -7,41 +7,48 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="#" class="logo">Rakshit Vahi</a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
   <!-- Hero Section -->
   <header class="hero">
-    <h1>Welcome!</h1>
-    <p>I am <span id="typing-text"></span></p>
+    <div class="container">
+      <h1>Hi, I'm Rakshit Vahi</h1>
+      <p id="typing-text"></p>
+    </div>
   </header>
 
-  <!-- Contact Section -->
-  <section class="contact">
-    <h2>Contact Me</h2>
-    <div class="contact-buttons">
-      <a href="https://linkedin.com/in/rakshit-vahi" target="_blank" class="btn">LinkedIn</a>
-      <a href="mailto:vahi.r@northeastern.edu" class="btn">Email</a>
-      <a href="https://github.com/RakshitVahi" target="_blank" class="btn">GitHub</a>
+  <!-- About Section -->
+  <section id="about" class="about">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>
+        I am a passionate Software Engineer and Product Manager in training with experience in Agile methodologies,
+        backend development, and CI/CD automation. I strive to create impactful solutions by blending technical expertise and business insights.
+      </p>
     </div>
   </section>
 
-  <!-- Card Section -->
-  <section class="cards">
-    <div class="card">
-      <h3>Work Experience</h3>
-      <p>Lead Graduate Assistant<br>Northeastern University</p>
-      <p>Software Engineer<br>GE Healthcare</p>
-      <p>Software Engineering Specialist<br>GE Healthcare</p>
-    </div>
-    <div class="card">
-      <h3>Education</h3>
-      <p>Master of Science in Engineering Management<br>Northeastern University</p>
-      <p>Bachelor of Engineering in Computer Science<br>PES Institute of Technology</p>
-    </div>
-  </section>
-
-  <footer>
-    <p>© 2024 Rakshit Vahi. All rights reserved.</p>
-  </footer>
-
-  <script src="script.js"></script>
-</body>
-</html>
+  <!-- Work Experience Section -->
+  <section id="work" class="work">
+    <div class="container">
+      <h2>Work Experience</h2>
+      <div class="card">
+        <h3>Lead Graduate Assistant</h3>
+        <p>Northeastern University</p>
+      </div>
+      <div class="card">
+        <h3>Software Engineer</h3>
+        <p>GE Healthcare, India</p>
+      </div>
+      <div class="card">
