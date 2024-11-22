@@ -1,14 +1,20 @@
 /* Hero Section */
 .hero {
   background: linear-gradient(to right, #000, #333);
-  height: 100vh;
+  height: 50vh; /* Reduced to half of the viewport height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
+
 .hero h1 {
-  font-size: 3rem;
+  font-size: 2.5rem; /* Slightly smaller text to match reduced size */
   margin-bottom: 10px;
 }
+
 .hero p {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: bold;
   color: #00bcd4;
 }
