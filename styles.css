@@ -1,0 +1,54 @@
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+  color: #333;
+  text-align: center;
+}
+
+.hero {
+  background-color: #0077b5;
+  color: white;
+  padding: 50px 0;
+}
+
+.contact {
+  background-color: #fff;
+  padding: 20px;
+}
+
+.contact-buttons .btn {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px 20px;
+  background-color: #0077b5;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  max-width: 300px;
+  text-align: center;
+}
+
+footer {
+  background-color: #0077b5;
+  color: white;
+  padding: 10px 0;
+}
