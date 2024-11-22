@@ -1,6 +1,6 @@
 /* Hero Section */
 .hero {
-  background: linear-gradient(to right, #0077b5, #005582);
+  background: linear-gradient(to right, #000, #333);
   height: 100vh;
 }
 .hero h1 {
