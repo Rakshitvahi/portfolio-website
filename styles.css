@@ -5,23 +5,24 @@ section {
 
 /* Hero Section */
 .hero {
-  background: linear-gradient(to right, #000, #333);
-  height: 50vh; /* Reduced height for hero section */
+  background: url('path/to/your/image.jpg') no-repeat center center/cover;
+  height: 50vh; /* Adjusted height */
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
+  color: white; /* Ensures text is readable over the image */
 }
-
 .hero h1 {
   font-size: 2.5rem;
   margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Adds shadow for text readability */
 }
-
 .hero p {
   font-size: 1.2rem;
   font-weight: bold;
   color: #00bcd4;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Adds shadow for text readability */
 }
 
 /* Section Titles */
