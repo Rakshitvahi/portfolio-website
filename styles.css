@@ -4,7 +4,7 @@ section {
 }
 
 .hero {
-  background: url('assets/newBG.png') no-repeat center center/cover;
+  background: url('assets/image.png') no-repeat center center/cover;
   position: relative;
   height: 50vh;
   display: flex;
