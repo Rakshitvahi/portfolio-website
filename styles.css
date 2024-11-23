@@ -1,7 +1,12 @@
+/* General Section Padding */
+section {
+  padding: 20px 0; /* Reduced padding from the top and bottom */
+}
+
 /* Hero Section */
 .hero {
   background: linear-gradient(to right, #000, #333);
-  height: 50vh; /* Reduced to half of the viewport height */
+  height: 50vh; /* Reduced height for hero section */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -9,7 +14,7 @@
 }
 
 .hero h1 {
-  font-size: 2.5rem; /* Slightly smaller text to match reduced size */
+  font-size: 2.5rem;
   margin-bottom: 10px;
 }
 
@@ -17,4 +22,35 @@
   font-size: 1.2rem;
   font-weight: bold;
   color: #00bcd4;
+}
+
+/* Section Titles */
+section h2 {
+  margin-bottom: 15px; /* Reduced margin below the heading */
+  text-align: center;
+  color: white; /* Ensures visibility in dark theme */
+}
+
+/* About Section */
+#about {
+  background-color: #111; /* Darker background for consistency */
+  color: #ddd;
+}
+
+/* Work Experience Section */
+#work {
+  background-color: #222; /* Slightly lighter than About section */
+  color: #ddd;
+}
+
+/* Education Section */
+#education {
+  background-color: #111;
+  color: #ddd;
+}
+
+/* Contact Section */
+#contact {
+  background-color: #222;
+  color: white;
 }
