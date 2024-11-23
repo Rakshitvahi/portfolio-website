@@ -6,12 +6,13 @@ section {
 /* Hero Section */
 .hero {
   background: url('https://github.com/Rakshitvahi/portfolio-website/blob/new_design/assets/newBG.png') no-repeat center center/cover;
+  position: relative;
   height: 50vh; /* Adjusted height */
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  color: white; /* Ensures text is readable over the image */
+  color: white;
 }
 .hero h1 {
   font-size: 2.5rem;
@@ -22,7 +23,11 @@ section {
   font-size: 1.2rem;
   font-weight: bold;
   color: #00bcd4;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Adds shadow for text readability */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  position: absolute;
+  bottom: 10%; /* Adjust this value to move the typing text up/down */
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 /* Section Titles */
