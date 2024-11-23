@@ -1,62 +1,127 @@
 /* General Section Padding */
 section {
-  padding: 20px 0; /* Reduced padding from the top and bottom */
+  padding: 15px 0; /* Reduced padding from the top and bottom */
+  text-align: center;
+  color: #f0f0f0;
 }
 
+section:nth-child(odd) {
+  background-color: #000000; /* Darker background for odd sections */
+}
+
+section:nth-child(even) {
+  background-color: #000000; /* Slightly lighter background for even sections */
+}
+
+body {
+  font-family: 'Roboto', sans-serif; /* Elegant modern font */
+  line-height: 1.6;
+  color: #f0f0f0;
+  margin: 0;
+  background-color: #000; /* Black background for the entire page */
+}
 /* Hero Section */
 .hero {
-  background: url('https://github.com/Rakshitvahi/portfolio-website/blob/new_design/assets/newBG.png') no-repeat center center/cover;
+  background: url('assets/newBG2.png') no-repeat center center/cover;
   position: relative;
   height: 50vh; /* Adjusted height */
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
+  text-transform: capitalize;
   color: white;
+  padding: 20px;
+}
+.hero-content {
+  position: absolute;
+  bottom: 10%; /* Adjust to move content vertically */
+  text-align: center;
 }
 .hero h1 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   margin-bottom: 10px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Adds shadow for text readability */
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7); /* Adds shadow for text readability */
+  animation: fadeIn 1.5s ease-in-out;
 }
 .hero p {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
+  font-weight: 400;
   font-weight: bold;
   color: #00bcd4;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-  position: absolute;
-  bottom: 10%; /* Adjust this value to move the typing text up/down */
-  left: 50%;
-  transform: translateX(-50%);
+  animation: fadeIn 2s ease-in-out;
 }
 
-/* Section Titles */
+/* Section Headings */
 section h2 {
-  margin-bottom: 15px; /* Reduced margin below the heading */
+  font-size: 1.8rem; /* Slightly smaller font size */
+  font-weight: 500; /* Lighter weight for elegance */
   text-align: center;
-  color: white; /* Ensures visibility in dark theme */
+  color: #f0f0f0; /* Subtle off-white color */
+  margin-bottom: 20px;
+  text-transform: uppercase; /* Consistent look across sections */
+  letter-spacing: 1.2px; /* Slight letter spacing for sophistication */
+  position: relative;
+  display: inline-block;
+}
+/* Underline Effect */
+section h2::after {
+  content: '';
+  position: absolute;
+  width: 50%;
+  height: 2px;
+  background-color: #00bcd4; /* Accent color for underline */
+  left: 25%; /* Center the underline */
+  bottom: -5px; /* Position slightly below the text */
 }
 
-/* About Section */
-#about {
-  background-color: #111; /* Darker background for consistency */
-  color: #ddd;
+/* Section Paragraphs */
+section p {
+  font-size: 1.2rem;
+  color: #cccccc; /* Subtle gray for body text */
+  text-align: center;
+  margin: 0 auto;
+  max-width: 800px;
 }
 
-/* Work Experience Section */
-#work {
-  background-color: #222; /* Slightly lighter than About section */
-  color: #ddd;
-}
-
-/* Education Section */
-#education {
-  background-color: #111;
-  color: #ddd;
-}
-
-/* Contact Section */
-#contact {
-  background-color: #222;
+.card {
+  background-color: #444; /* Neutral card background */
   color: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px); /* Slight lift effect */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5); /* Stronger shadow on hover */
+  background-color: #555; /* Lighter background on hover */
+}
+
+/* Card Titles */
+.card h5 {
+  color: #00bcd4; /* Highlighted title color */
+  transition: color 0.3s ease; /* Smooth color transition */
+  font-weight: bold;
+}
+
+/* Card Title Hover Effect */
+.card:hover h5 {
+  color: #1de9b6; /* Change title color on hover */
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
