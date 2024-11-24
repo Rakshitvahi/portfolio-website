@@ -6,27 +6,40 @@
   <title>Rakshit Vahi Portfolio</title>
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
   <!-- Custom CSS -->
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container">
-      <a class="navbar-brand" href="#">Rakshit Vahi</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="#work">Work</a></li>
-          <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-        </ul>
-      </div>
+
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#hero">Rakshit Vahi</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#skills">Skills & Tools</a></li>
+        <li class="nav-item"><a class="nav-link" href="#work">Work Experience</a></li>
+        <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
     </div>
-  </nav>
+  </div>
+</nav>
+
 
   <!-- Hero Section -->
   <header class="hero text-center text-white d-flex align-items-center justify-content-center">
@@ -34,6 +47,18 @@
       <h1>Hi, I'm Rakshit Vahi</h1>
       <p id="typing-text"></p>
     </div>
+    <!-- Contact Icons on the Hero -->
+  <div class="hero-contact-icons">
+    <a href="https://linkedin.com/in/rakshit-vahi" target="_blank" class="contact-icon">
+      <i class="fab fa-linkedin"></i>
+    </a>
+    <a href="mailto:vahi.r@northeastern.edu" class="contact-icon">
+      <i class="fas fa-envelope"></i>
+    </a>
+    <a href="https://github.com/RakshitVahi" target="_blank" class="contact-icon">
+      <i class="fab fa-github"></i>
+    </a>
+  </div>
   </header>
 
   <!-- About Section -->
@@ -61,14 +86,33 @@
       </div>
     </div>
   </section>
-  
-  <!-- Contact Section -->
-  <section id="contact">
-    <h2>Contact Me</h2>
-    <a href="https://linkedin.com/in/rakshit-vahi" class="btn btn-primary m-2" target="_blank">LinkedIn</a>
-    <a href="mailto:vahi.r@northeastern.edu" class="btn btn-secondary m-2">Email</a>
-    <a href="https://github.com/RakshitVahi" class="btn btn-dark m-2" target="_blank">GitHub</a>
+
+   <!-- Skills Section -->
+  <section id="skills">
+    <h2>Skills & Tools</h2>
+    <div class="container">
+      <div class="row" id="skills-container">
+        <!-- Skills categories and tools will be dynamically added here -->
+      </div>
+    </div>
   </section>
+
+  <!-- Contact Section -->
+<section id="contact" class="text-center">
+  <h2>Contact Me</h2>
+  <div class="contact-icons">
+    <a href="https://linkedin.com/in/rakshit-vahi" target="_blank" class="contact-item">
+      <i class="fab fa-linkedin"></i><p>LinkedIn</p>
+    </a>
+    <a href="mailto:vahi.r@northeastern.edu" class="contact-item">
+      <i class="fas fa-envelope"></i><p>Email</p>
+    </a>
+    <a href="https://github.com/RakshitVahi" target="_blank" class="contact-item">
+      <i class="fab fa-github"></i><p>GitHub</p>
+    </a>
+  </div>
+</section>
+
 
   <!-- Footer -->
   <footer class="bg-dark text-white text-center py-3">

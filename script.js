@@ -105,3 +105,109 @@ data.education.items.forEach(item => {
   `;
   educationContainer.appendChild(educationCard);
 });
+
+
+//------------------------Skills and Tools--------------------------
+const skillsData = {
+  categories: [
+    {
+      title: "Software Development & CI/CD",
+      tools: [
+        { name: "Java", iconClass: "devicon-java-plain colored" },
+        { name: "Python", iconClass: "devicon-python-plain colored" },
+        { name: "Go Lang", iconClass: "devicon-go-plain colored" },
+        { name: "Spring Framework", iconClass: "devicon-spring-plain colored" },
+        { name: "Docker", iconClass: "devicon-docker-plain colored" },
+        { name: "Jenkins", iconClass: "devicon-jenkins-plain colored" },
+        { name: "Git", iconClass: "devicon-git-plain colored" },
+        { name: "Maven", iconClass: "devicon-maven-plain colored" }
+      ]
+    },
+    {
+      title: "Cloud & Containerization",
+      tools: [
+        { name: "AWS", iconClass: "devicon-aws-plain-wordmark colored" },
+        { name: "GCP", iconClass: "devicon-googlecloud-plain colored" },
+        { name: "Docker", iconClass: "devicon-docker-plain colored" },
+        { name: "Kubernetes", iconClass: "devicon-kubernetes-plain colored" }
+      ]
+    },
+    {
+      title: "Databases",
+      tools: [
+        { name: "MySQL", iconClass: "devicon-mysql-plain colored" },
+        { name: "Redis", iconClass: "devicon-redis-plain-wordmark colored" },
+        { name: "MongoDB", iconClass: "devicon-mongodb-plain colored" },
+        { name: "PostgreSQL", iconClass: "devicon-postgresql-plain colored" }
+      ]
+    },
+    {
+      title: "Agile Product Development",
+      tools: [
+        { name: "Scrum", iconClass: "fas fa-tasks" },
+        { name: "Kanban", iconClass: "fas fa-project-diagram" },
+        { name: "Team Collaboration", iconClass: "fas fa-users" },
+        { name: "Project Planning", iconClass: "fas fa-calendar-alt" }
+      ]
+    }
+  ]
+};
+
+// Populate the Skills Section
+const skillsContainer = document.getElementById("skills-container");
+
+skillsData.categories.forEach(category => {
+  const categoryDiv = document.createElement("div");
+  categoryDiv.className = "col-md-6"; // Adjust to fit two cards side by side
+
+  // Create the card
+  const card = document.createElement("div");
+  card.className = "card mb-4";
+
+  // Create the card body
+  const cardBody = document.createElement("div");
+  cardBody.className = "card-body";
+
+  // Create the category title
+  const categoryTitle = document.createElement("h3");
+  categoryTitle.className = "card-title";
+  categoryTitle.textContent = category.title;
+
+  // Create the tool icons container
+  const toolIconsContainer = document.createElement("div");
+  toolIconsContainer.className = "tool-icons";
+
+  // Add each tool
+  category.tools.forEach(tool => {
+    const toolItem = document.createElement("div");
+    toolItem.className = "tool-item";
+
+    // Add icon
+    const icon = document.createElement("i");
+    icon.className = tool.iconClass;
+
+    // Add tool name
+    const toolName = document.createElement("p");
+    toolName.textContent = tool.name;
+
+    // Append icon and name to the tool item
+    toolItem.appendChild(icon);
+    toolItem.appendChild(toolName);
+
+    // Append tool item to the tool icons container
+    toolIconsContainer.appendChild(toolItem);
+  });
+
+  // Append the category title and tools container to the card body
+  cardBody.appendChild(categoryTitle);
+  cardBody.appendChild(toolIconsContainer);
+
+  // Append the card body to the card
+  card.appendChild(cardBody);
+
+  // Append the card to the category div
+  categoryDiv.appendChild(card);
+
+  // Append the category div to the main skills container
+  skillsContainer.appendChild(categoryDiv);
+});
