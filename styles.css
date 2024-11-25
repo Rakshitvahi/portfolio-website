@@ -1,24 +1,43 @@
 /* Navbar */
 .navbar {
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #1e1e1e; /* Dark background for the navbar */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
+/* Styling for the top-left name */
 .navbar-brand {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #00bcd4 !important; /* Highlighted brand color */
+  font-size: 1.8rem; /* Bigger font size */
+  font-weight: 700; /* Bold text */
+  color: #ffffff; /* White color */
+  letter-spacing: 1px; /* Slight spacing between letters */
+  text-transform: uppercase; /* All caps */
+  transition: color 0.3s ease; /* Smooth hover effect */
+}
+.navbar-brand:hover {
+  color: #00bcd4; /* Change color on hover to the accent color */
+  text-shadow: 0px 0px 10px rgba(0, 188, 212, 0.7); /* Subtle glowing effect */
 }
 
 .navbar-nav .nav-link {
-  font-size: 1rem;
-  padding: 8px 15px;
-  color: #f0f0f0 !important; /* Ensure text color is white */
-  transition: color 0.3s, background-color 0.3s; /* Add smooth transitions */
+  margin: 0 15px;
+  color: #b0b0b0; /* Subtle gray color for links */
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-decoration: none; /* Remove underline */
+  transition: color 0.3s ease, border-bottom 0.3s ease; /* Smooth hover effects */
+  padding-bottom: 5px; /* Space for underline effect */
 }
 
 .navbar-nav .nav-link:hover {
-  background-color: #00bcd4; /* Highlight background on hover */
-  color: #1e1e1e !important; /* Invert text color on hover */
+  color: #ffffff; /* Change to white on hover */
+  border-bottom: 2px solid #00bcd4; /* Underline effect */
 }
 
 .navbar-toggler {
@@ -49,7 +68,7 @@ section {
 }
 
 section:nth-child(odd) {
-  background-color: #222; /* Darker background for odd sections */
+  background-color: #333434; /* Darker background for odd sections */
 }
 
 section:nth-child(even) {
@@ -57,11 +76,11 @@ section:nth-child(even) {
 }
 
 body {
-  font-family: 'Roboto', sans-serif; /* Elegant modern font */
+  font-family: 'Roboto', sans-serif; /* Elegant modern font*/
   line-height: 1.6;
   color: #f0f0f0;
   margin: 0;
-  background-color: #000; /* Black background for the entire page */
+  background-color: #000; /* Black background for the entire page*/
 }
 /* Hero Section */
 .hero {
@@ -98,40 +117,6 @@ body {
   animation: fadeIn 2s ease-in-out;
 }
 
-/* Contact Icons on the Hero */
-.hero-contact-icons {
-  position: absolute;
-  top: 50%;
-  right: 20px; /* Adjust spacing from the right */
-  transform: translateY(-50%); /* Center vertically */
-  display: flex;
-  flex-direction: column;
-  gap: 15px; /* Space between icons */
-  z-index: 3; /* Ensure it's above the hero background */
-}
-
-.contact-icon {
-  font-size: 2rem;
-  color: #00bcd4;
-  text-decoration: none;
-  transition: transform 0.3s ease, color 0.3s ease;
-}
-
-.contact-icon:hover {
-  transform: scale(1.2); /* Enlarge icon slightly on hover */
-  color: #f0f0f0; /* Change color on hover */
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .hero-contact-icons {
-    right: 10px; /* Adjust spacing for smaller screens */
-  }
-
-  .contact-icon {
-    font-size: 1.5rem; /* Smaller icons on mobile */
-  }
-}
 /*-------------------------------------------------*/
 
 /* Section Headings */
@@ -303,3 +288,54 @@ section p {
   }
 }
 
+/* Social Bar */
+.social-bar {
+  position: absolute; /* Attach to the hero */
+  right: 0; /* Stick to the right margin */
+  top: 50%; /* Center vertically */
+  transform: translateY(-50%); /* Adjust for exact vertical center */
+  width: 100px; /* Set a width for the bar */
+  background-color: #5f5f5f; /* Light background color */
+  border-radius: 8px 0 0 8px; /* Rounded edges on the left */
+  box-shadow: -5px 0 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  padding: 0px 5px; /* Space around the icons */
+  display: flex;
+  flex-direction: column; /* Stack icons vertically */
+  align-items: center; /* Center icons horizontally */
+}
+
+/* Social Media Icons */
+.social-icon {
+  display: block; /* Stack vertically */
+  margin: 10px 0; /* Spacing between icons */
+  color: #00bcd4; /* Icon color */
+  font-size: 2.3rem; /* Icon size */
+  text-align: center;
+  transition: transform 0.3s ease, color 0.3s ease;
+  animation: pop-up 1s ease infinite;
+}
+/* Add delays for each button to pop up sequentially */
+.social-icon:nth-child(1) {
+  animation-delay: 0s; /* No delay for the first icon */
+}
+.social-icon:nth-child(2) {
+  animation-delay: 0.5s; /* Half-second delay for the second icon */
+}
+.social-icon:nth-child(3) {
+  animation-delay: 1s; /* One-second delay for the third icon */
+}
+
+.social-icon:hover {
+  transform: scale(1.3); /* Slight enlargement on hover */
+  animation: none;
+  color: #ff9900; /* Hover color */
+}
+
+@keyframes pop-up {
+  0%, 100% {
+    transform: scale(1); /* Original size */
+  }
+  50% {
+    transform: scale(1.2); /* Slightly larger size */
+  }
+}
