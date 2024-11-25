@@ -294,11 +294,11 @@ section p {
   right: 0; /* Stick to the right margin */
   top: 50%; /* Center vertically */
   transform: translateY(-50%); /* Adjust for exact vertical center */
-  width: 100px; /* Set a width for the bar */
+  width: 80px; /* Set a width for the bar */
   background-color: #5f5f5f; /* Light background color */
   border-radius: 8px 0 0 8px; /* Rounded edges on the left */
   box-shadow: -5px 0 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-  padding: 0px 5px; /* Space around the icons */
+  padding: 0px 0px; /* Space around the icons */
   display: flex;
   flex-direction: column; /* Stack icons vertically */
   align-items: center; /* Center icons horizontally */
@@ -309,7 +309,7 @@ section p {
   display: block; /* Stack vertically */
   margin: 10px 0; /* Spacing between icons */
   color: #00bcd4; /* Icon color */
-  font-size: 2.3rem; /* Icon size */
+  font-size: 2rem; /* Icon size */
   text-align: center;
   transition: transform 0.3s ease, color 0.3s ease;
   animation: pop-up 1s ease infinite;
