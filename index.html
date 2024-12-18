@@ -4,44 +4,123 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rakshit Vahi Portfolio</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#hero">Rakshit Vahi</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#skills">Skills & Tools</a></li>
+        <li class="nav-item"><a class="nav-link" href="#work">Work Experience</a></li>
+        <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
   <!-- Hero Section -->
-  <header class="hero">
-    <h1>Welcome!</h1>
-    <p>I am <span id="typing-text"></span></p>
+  <header class="hero text-center text-white d-flex align-items-center justify-content-center">
+    <div class="hero-content">
+      <h1>Hi, I'm Rakshit Vahi</h1>
+      <p id="typing-text"></p>
+    </div>
+    <!-- Contact Icons on the Hero -->
+    <div class="social-bar">
+      <a href="https://linkedin.com/in/rakshit-vahi" target="_blank" class="social-icon">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="mailto:vahi.r@northeastern.edu" class="social-icon">
+        <i class="fas fa-envelope"></i>
+      </a>
+      <a href="https://github.com/RakshitVahi" target="_blank" class="social-icon">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
   </header>
 
+  <!-- About Section -->
+  <section id="about">
+    <h2 id="about-heading"></h2>
+    <p id="about-content"></p>
+  </section>
+
+  <!-- Work Section -->
+  <section id="work">
+    <h2 id="work-heading"></h2>
+    <div class="container">
+      <div class="row g-4" id="work-container">
+        <!-- Work items will be dynamically inserted here -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section id="education">
+    <h2 id="education-heading"></h2>
+    <div class="container">
+      <div class="row g-4" id="education-container">
+        <!-- Education items will be dynamically inserted here -->
+      </div>
+    </div>
+  </section>
+
+   <!-- Skills Section -->
+  <section id="skills">
+    <h2>Skills & Tools</h2>
+    <div class="container">
+      <div class="row" id="skills-container">
+        <!-- Skills categories and tools will be dynamically added here -->
+      </div>
+    </div>
+  </section>
+
   <!-- Contact Section -->
-  <section class="contact">
-    <h2>Contact Me</h2>
-    <div class="contact-buttons">
-      <a href="https://linkedin.com/in/rakshit-vahi" target="_blank" class="btn">LinkedIn</a>
-      <a href="mailto:vahi.r@northeastern.edu" class="btn">Email</a>
-      <a href="https://github.com/RakshitVahi" target="_blank" class="btn">GitHub</a>
-    </div>
-  </section>
+<section id="contact" class="text-center">
+  <h2>Contact Me</h2>
+  <div class="contact-icons">
+    <a href="https://linkedin.com/in/rakshit-vahi" target="_blank" class="contact-item">
+      <i class="fab fa-linkedin"></i><p>LinkedIn</p>
+    </a>
+    <a href="mailto:vahi.r@northeastern.edu" class="contact-item">
+      <i class="fas fa-envelope"></i><p>Email</p>
+    </a>
+    <a href="https://github.com/RakshitVahi" target="_blank" class="contact-item">
+      <i class="fab fa-github"></i><p>GitHub</p>
+    </a>
+  </div>
+</section>
 
-  <!-- Card Section -->
-  <section class="cards">
-    <div class="card">
-      <h3>Work Experience</h3>
-      <p>Lead Graduate Assistant<br>Northeastern University</p>
-      <p>Software Engineer<br>GE Healthcare</p>
-      <p>Software Engineering Specialist<br>GE Healthcare</p>
-    </div>
-    <div class="card">
-      <h3>Education</h3>
-      <p>Master of Science in Engineering Management<br>Northeastern University</p>
-      <p>Bachelor of Engineering in Computer Science<br>PES Institute of Technology</p>
-    </div>
-  </section>
 
-  <footer>
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-3">
     <p>© 2024 Rakshit Vahi. All rights reserved.</p>
   </footer>
 
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
