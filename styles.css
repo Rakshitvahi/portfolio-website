@@ -341,4 +341,16 @@ section p {
   }
 }
 
+.highlight-link {
+  color: inherit; /* Keep the original color */
+  text-decoration: none; /* Remove underline */
+}
 
+.highlight-link:hover {
+  color: #ff9900; /* Highlight color */
+  text-shadow: 0 0 10px #ff9900; /* Add glowing effect */
+  background-color: rgba(255, 255, 255, 0.2); /* Subtle background highlight */
+  padding: 5px; /* Space around the text */
+  border-radius: 5px; /* Optional: Rounded corners */
+  transition: all 0.3s ease-in-out; /* Smooth hover effect */
+}
