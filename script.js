@@ -1,5 +1,5 @@
 // Typing Effect
-const texts = ["a Software Engineer", "a Product Enthusiast", "a Scrum Master"];
+const texts = ["a Software Engineer", "a Product Enthusiast", "an Agile Expert"];
 let count = 0;
 let index = 0;
 let currentText = "";
@@ -16,9 +16,9 @@ let letter = "";
   if (letter.length === currentText.length) {
     count++;
     index = 0;
-    setTimeout(type, 1000); // Pause before typing the next text
+    setTimeout(type, 500); // Pause before typing the next text
   } else {
-    setTimeout(type, 100); // Typing speed
+    setTimeout(type, 200); // Typing speed
   }
 })();
 
@@ -46,6 +46,14 @@ const data = {
       {
         title: "Software Engineering Specialist",
         description: "GE Healthcare"
+      },
+      {
+        title: "Grduate Software Engineer",
+        description: "Eka Software Solutions"
+      },
+      {
+        title: "Software Engineer Intern",
+        description: "CGI"
       }
     ]
   },
@@ -65,8 +73,8 @@ const data = {
 };
 
 // Populate About Section
-document.getElementById('about-heading').textContent = data.about.heading;
-document.getElementById('about-content').textContent = data.about.content;
+//document.getElementById('about-heading').textContent = data.about.heading;
+//document.getElementById('about-content').textContent = data.about.content;
 
 // Populate Work Experience Section
 const workHeading = document.getElementById('work-heading');
@@ -120,13 +128,13 @@ const skillsData = {
         { name: "Docker", iconClass: "devicon-docker-plain colored" },
         { name: "Jenkins", iconClass: "devicon-jenkins-plain colored" },
         { name: "Git", iconClass: "devicon-git-plain colored" },
-        { name: "Maven", iconClass: "devicon-maven-plain colored" }
+        { name: "Maven", imagePath: "assets/maven.svg" }
       ]
     },
     {
       title: "Cloud & Containerization",
       tools: [
-        { name: "AWS", iconClass: "devicon-aws-plain-wordmark colored" },
+        { name: "AWS", imagePath: "assets/aws.svg" },
         { name: "GCP", iconClass: "devicon-googlecloud-plain colored" },
         { name: "Docker", iconClass: "devicon-docker-plain colored" },
         { name: "Kubernetes", iconClass: "devicon-kubernetes-plain colored" }
@@ -182,16 +190,28 @@ skillsData.categories.forEach(category => {
     const toolItem = document.createElement("div");
     toolItem.className = "tool-item";
 
-    // Add icon
-    const icon = document.createElement("i");
-    icon.className = tool.iconClass;
+    // Add icon]
+    //------------
+    if (tool.iconClass) {
+      const icon = document.createElement("i");
+      icon.className = tool.iconClass; // Use the tool's class name
+      toolItem.appendChild(icon);
+    } else if (tool.imagePath) {
+      // Use an image as a fallback for missing icons
+      const img = document.createElement("img");
+      img.src = tool.imagePath;
+      img.alt = tool.name;
+      img.style.width = "32px"; // Optional: Adjust size
+      toolItem.appendChild(img);
+    }
+    //-----------
 
     // Add tool name
     const toolName = document.createElement("p");
     toolName.textContent = tool.name;
 
     // Append icon and name to the tool item
-    toolItem.appendChild(icon);
+   // toolItem.appendChild(icon);
     toolItem.appendChild(toolName);
 
     // Append tool item to the tool icons container
