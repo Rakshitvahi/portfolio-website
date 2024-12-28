@@ -4,10 +4,11 @@
   justify-content: space-between;
   align-items: center;
   padding: 15px 30px;
-  background-color: #1e1e1e; /* Dark background for the navbar */
   position: sticky;
   top: 0;
   z-index: 1000;
+
+  background-color: #ffffff; /* White navbar */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
@@ -68,7 +69,7 @@ section {
 }
 
 section:nth-child(odd) {
-  background-color: #333434; /* Darker background for odd sections */
+  background-color: #000000; /* Darker background for odd sections */
 }
 
 section:nth-child(even) {
@@ -76,11 +77,11 @@ section:nth-child(even) {
 }
 
 body {
-  font-family: 'Roboto', sans-serif; /* Elegant modern font*/
+  background-color: #f8f9fa; /* Light background */
+  color: #333333; /* Dark text */
+  font-family: 'Arial', sans-serif;
   line-height: 1.6;
-  color: #f0f0f0;
   margin: 0;
-  background-color: #000; /* Black background for the entire page*/
 }
 /* Hero Section */
 .hero {
@@ -152,7 +153,7 @@ section p {
 }
 
 .card {
-  background-color: #444; /* Neutral card background */
+  background-color: #101516; /* Neutral card background */
   color: white;
   border-radius: 10px;
   padding: 20px;
@@ -339,3 +340,5 @@ section p {
     transform: scale(1.2); /* Slightly larger size */
   }
 }
+
+
