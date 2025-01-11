@@ -32,28 +32,39 @@ const data = {
     heading: "Work Experience",
     items: [
       {
-        title: "Lead Graduate Teaching Assistant",
-        description: "Northeastern University"
-      },
-      {
-        title: "Subject Matter Expert",
-        description: "Northeastern University"
-      },
-      {
         title: "Software Engineer",
-        description: "GE Healthcare"
+        description: "GE Healthcare",
+         details: "Built 15+ backend microservices using Java and RESTful APIs, reducing response times by 60%.\n Deployed systems with Docker and Kubernetes and automated CI/CD pipelines to cut build times by 80%. Led Agile sprints, improving timelines by 30%, and enhanced performance for healthcare systems."
       },
       {
         title: "Software Engineering Specialist",
-        description: "GE Healthcare"
+        description: "GE Healthcare",
+        details: "Developed lightweight GoLang microservices, reducing response times by 40%. Achieved 90%+ code coverage with TDD, \nensuring reliability. Wrote 300+ integration tests, used design patterns for scalability, and authored detailed technical documentation to improve onboarding by 65%."
       },
       {
         title: "Grduate Software Engineer",
-        description: "Eka Software Solutions"
+        description: "Eka Software Solutions",
+        details: "Built robust software solutions for commodity management systems, enhancing performance \nand scalability."
       },
       {
         title: "Software Engineer Intern",
-        description: "CGI"
+        description: "CGI",
+        details: "Worked on real-time monitoring tools for enterprise applications, gaining hands-on experience in agile development."
+      }
+    ]
+  },
+  partTimeWork: {
+    heading: "Part-Time Work Experience",
+    items: [
+      {
+        title: "Lead Graduate Teaching Assistant",
+        description: "Northeastern University",
+        details: "Responsible for mentoring over 50 students in Operational Research, providing guidance on complex problem-solving, and evaluating assignments."
+      },
+      {
+        title: "Technical Specialist",
+        description: "Northeastern University ITS",
+        details: "Developed automated workflows with Power Automate, reducing response times by 90%. Debugged 30+ Python and Java codebases \nto resolve compatibility issues and enhance student understanding, showcasing problem-solving skills and technical expertise"
       }
     ]
   },
@@ -83,16 +94,58 @@ workHeading.textContent = data.work.heading;
 
 data.work.items.forEach(item => {
   const workCard = document.createElement('div');
-  workCard.className = 'col-md-4'; // Bootstrap column for responsive layout
+  workCard.className = 'col-md-4 d-flex'; // Bootstrap column for responsive layout
   workCard.innerHTML = `
     <div class="card mb-3">
       <div class="card-body">
         <h5 class="card-title">${item.title}</h5>
         <p class="card-text">${item.description}</p>
+        <div class="card-details">
+        <p>${item.details.split('\n').slice(0, 1).join(' ')}
+          <span class="more-details" style="display: none;">
+            ${item.details.split('\n').slice(1).join(' ')}
+          </span></p>
+          <button class="read-more-btn">Read More</button>
+        </div>
       </div>
     </div>
   `;
   workContainer.appendChild(workCard);
+});
+
+
+// Event delegation to handle "Read More" button clicks
+workContainer.addEventListener('click', function(event) {
+  if (event.target.classList.contains('read-more-btn')) {
+    const moreDetails = event.target.previousElementSibling.querySelector('.more-details');
+    if (moreDetails.style.display === 'none') {
+      moreDetails.style.display = 'inline';
+      event.target.textContent = 'Read Less';
+    } else {
+      moreDetails.style.display = 'none';
+      event.target.textContent = 'Read More';
+    }
+  }
+});
+
+// Populate Part-Time Work Experience
+const partTimeHeading = document.getElementById('part-time-heading');
+const partTimeContainer = document.getElementById('part-time-container');
+partTimeHeading.textContent = data.partTimeWork.heading;
+
+data.partTimeWork.items.forEach(item => {
+  const partTimeCard = document.createElement('div');
+  partTimeCard.className = 'col-md-4 d-flex';
+  partTimeCard.innerHTML = `
+    <div class="card mb-3">
+      <div class="card-body">
+        <h5 class="card-title">${item.title}</h5>
+        <p class="card-text">${item.description}</p>
+        <!-- <p class="card-details">${item.details}</p> -->
+      </div>
+    </div>
+  `;
+  partTimeContainer.appendChild(partTimeCard);
 });
 
 // Populate Education Section
