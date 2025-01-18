@@ -3,12 +3,15 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 8px 16px;
+  padding: 5px 10px;
   position: sticky;
   top: 0;
   z-index: 1000;
   background-color: #f8f9fa; /* White navbar */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  border-radius: 30px;
+  max-width: 60%; /* Set maximum width */
+  margin: 0 auto;
 }
 
 /* Styling for the top-left name */
@@ -187,12 +190,12 @@ section h2::after {
   margin-left: auto;
   margin-right: auto;
   align-self: flex-end;
-  border-radius: 5px; /* Rounded corners */
+  border-radius: 20px; /* Rounded corners */
   font-size: 0.9rem; /* Slightly smaller font size */
 }
 
 .read-more-btn:hover {
-  ackground-color: #00bcd4;
+  background-color: #00bcd4;
   color: white;
   border-color: #00bcd4;
 }
