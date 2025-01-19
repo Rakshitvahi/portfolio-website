@@ -10,7 +10,7 @@
   background-color: #f8f9fa; /* White navbar */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
   border-radius: 30px;
-  max-width: 60%; /* Set maximum width */
+  max-width: 75%; /* Set maximum width */
   margin: 0 auto;
 }
 
@@ -27,6 +27,11 @@
 .navbar-brand:hover {
   color: #a9e4ec; /* Change color on hover to the accent color */
   text-shadow: 0px 0px 10px rgba(0, 188, 212, 0.7); /* Subtle glowing effect */
+}
+
+.navbar-nav {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping of nav items */
 }
 
 .navbar-nav .nav-link {
@@ -46,11 +51,13 @@
 }
 
 .navbar-toggler {
-  border: none; /* Remove button border */
-}
+  border: none;
+} 
 
 .navbar-toggler-icon {
-  filter: invert(1); /* Make the toggle icon visible on dark background */
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 /* Sticky Navbar */
@@ -58,6 +65,34 @@
   position: sticky;
   top: 0;
   z-index: 999;
+}
+
+/* Responsive font sizes */
+@media (max-width: 992px) {
+  .navbar-brand {
+    font-size: 1.3rem;
+  }
+  .navbar-nav .nav-link {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-brand {
+    font-size: 1.2rem;
+  }
+  .navbar-nav .nav-link {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar-brand {
+    font-size: 1.2rem;
+  }
+  .navbar-nav .nav-link {
+    font-size: 0.7rem;
+  }
 }
 
 /* Smooth Scrolling */
@@ -119,6 +154,32 @@ body {
   animation: fadeIn 2s ease-in-out;
 }
 
+@media (max-width: 992px) {
+  .hero-content h1 {
+    font-size: 3vw;
+  }
+  .hero-content p {
+    font-size: 3vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 3vw;
+  }
+  .hero-content p {
+    font-size: 3vw;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-content h1 {
+    font-size: 3vw;
+  }
+  .hero-content p {
+    font-size: 3vw;
+  }
+}
 /*-------------------------------------------------*/
 
 /* Section Headings */
