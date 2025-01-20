@@ -1,5 +1,5 @@
 // Typing Effect
-const texts = ["a Software Engineer", "a Product Enthusiast", "an Agile Expert"];
+const texts = ["a Backend Developer", "a Java Expert", "a RESTful API Developer"];
 let count = 0;
 let index = 0;
 let currentText = "";
@@ -219,7 +219,7 @@ const skillsContainer = document.getElementById("skills-container");
 
 skillsData.categories.forEach(category => {
   const categoryDiv = document.createElement("div");
-  categoryDiv.className = "col-md-6"; // Adjust to fit two cards side by side
+  categoryDiv.className = "col-md-6 d-flex"; // Adjust to fit two cards side by side
 
   // Create the card
   const card = document.createElement("div");
@@ -230,7 +230,7 @@ skillsData.categories.forEach(category => {
   cardBody.className = "card-body";
 
   // Create the category title
-  const categoryTitle = document.createElement("h3");
+  const categoryTitle = document.createElement("h5");
   categoryTitle.className = "card-title";
   categoryTitle.textContent = category.title;
 
@@ -284,3 +284,30 @@ skillsData.categories.forEach(category => {
   // Append the category div to the main skills container
   skillsContainer.appendChild(categoryDiv);
 });
+
+  document.addEventListener('DOMContentLoaded', function() {
+    const projectsContainer = document.getElementById('projects-container');
+
+    fetch('https://api.github.com/users/RakshitVahi/repos')
+      .then(response => response.json())
+      .then(data => {
+        data.forEach(repo => {
+          const projectCard = document.createElement('div');
+          projectCard.classList.add('col-md-4');
+          projectCard.classList.add('d-flex');
+
+          projectCard.innerHTML = `
+          <div class="card mb-3">
+            <div class="card-body">
+              <h5 class="card-title-projects">${repo.name}</h5>
+              <!--<p class="card-details">${repo.description || 'No description available'}</p>-->
+              <a href="${repo.html_url}" target="_blank"><button class="read-more-btn">View on GitHub</button></a>
+            </div>
+          </div>
+          `;
+
+          projectsContainer.appendChild(projectCard);
+        });
+      })
+      .catch(error => console.error('Error fetching GitHub repos:', error));
+  });
