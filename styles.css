@@ -122,7 +122,7 @@ body {
 .hero {
   background: url('assets/newBG3.png') no-repeat center center/cover;
   position: relative;
-  height: 45vh; /* Adjusted height */
+  height: 55vh; /* Adjusted height */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -137,8 +137,8 @@ body {
   bottom: 10%; /* Adjust to move content vertically */
   text-align: center;
 }
-.hero h1 {
-  font-size: 2rem;
+.hero h3 {
+  font-size: 1.5rem;
   margin-bottom: 10px;
   font-weight: 700;
   letter-spacing: 2px;
@@ -155,7 +155,7 @@ body {
 }
 
 @media (max-width: 992px) {
-  .hero-content h1 {
+  .hero-content h3 {
     font-size: 3vw;
   }
   .hero-content p {
@@ -164,7 +164,7 @@ body {
 }
 
 @media (max-width: 768px) {
-  .hero-content h1 {
+  .hero-content h3 {
     font-size: 3vw;
   }
   .hero-content p {
@@ -173,7 +173,7 @@ body {
 }
 
 @media (max-width: 576px) {
-  .hero-content h1 {
+  .hero-content h3 {
     font-size: 3vw;
   }
   .hero-content p {
@@ -462,4 +462,43 @@ section h2::after {
 
 .card a {
   text-decoration: none; /* Remove underline */
+}
+
+.skills-icons {
+  background-color: #101516; /* Semi-transparent black background */
+  padding: 10px 20px;
+  border-radius: 10px; /* Rounded corners */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.skills-item {
+  background-color: #101516; /* Semi-transparent black background */
+  padding: 10px 20px;
+  border-radius: 10px; /* Rounded corners */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  gap: 10px
+}
+
+.skills-item i {
+  font-size: 2rem; /* Smaller icon size */
+  color: #00bcd4;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.skills-item p {
+  margin-top: 4px; /* Smaller spacing between icon and text */
+  font-size: 0.85rem; /* Smaller text size */
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.skills-item i:hover {
+  transform: scale(1.1); /* Slight hover effect */
+  color: #f0f0f0;
 }
