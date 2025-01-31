@@ -300,7 +300,7 @@ skillsData.categories.forEach(category => {
           <div class="card mb-3">
             <div class="card-body">
               <h5 class="card-title-projects">${repo.name}</h5>
-              <!--<p class="card-details">${repo.description || 'No description available'}</p>-->
+              <p class="card-details">${repo.description || 'No description available'}</p>
               <a href="${repo.html_url}" target="_blank"><button class="read-more-btn">View on GitHub</button></a>
             </div>
           </div>
