@@ -291,22 +291,49 @@ skillsData.categories.forEach(category => {
     fetch('https://api.github.com/users/RakshitVahi/repos')
       .then(response => response.json())
       .then(data => {
+        const reposWithDescription = [];
+        const reposWithoutDescription = [];
         data.forEach(repo => {
-          const projectCard = document.createElement('div');
-          projectCard.classList.add('col-md-4');
-          projectCard.classList.add('d-flex');
+          if (repo.description) {
+            reposWithDescription.push(repo);
+          } else {
+            reposWithoutDescription.push(repo);
+          }
+        });
+        const allRepos = [...reposWithDescription, ...reposWithoutDescription];
 
-          projectCard.innerHTML = `
-          <div class="card mb-3">
-            <div class="card-body">
-              <h5 class="card-title-projects">${repo.name}</h5>
-              <p class="card-details">${repo.description || 'No description available'}</p>
-              <a href="${repo.html_url}" target="_blank"><button class="read-more-btn">View on GitHub</button></a>
-            </div>
-          </div>
-          `;
+        allRepos.forEach(repo => {
+          fetch(repo.languages_url)
+            .then(response => response.json())
+            .then(languages => {
+              const techStack = Object.keys(languages);
 
-          projectsContainer.appendChild(projectCard);
+              const projectCard = document.createElement('div');
+              projectCard.classList.add('col-md-4', 'd-flex');
+
+              let techStackHTML = '';
+              if (techStack.length > 0) {
+                techStackHTML = `<div class="tech-stack"><strong>Tech Stack:</strong><ul>`;
+                techStack.forEach(language => {
+                  techStackHTML += `<li>${language}</li>`;
+                });
+                techStackHTML += `</ul></div>`;
+              }
+
+              projectCard.innerHTML = `
+                <div class="card mb-3">
+                  <div class="card-body">
+                    <h5 class="card-title-projects">${repo.name}</h5>
+                    <p class="card-details">${repo.description || 'No description available'}</p>
+                    <a href="${repo.html_url}" target="_blank"><button class="read-more-btn">View on GitHub</button></a>
+                    ${techStackHTML}
+                  </div>
+                </div>
+              `;
+
+              projectsContainer.appendChild(projectCard);
+            })
+            .catch(error => console.error('Error fetching languages:', error));
         });
       })
       .catch(error => console.error('Error fetching GitHub repos:', error));

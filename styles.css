@@ -502,3 +502,37 @@ section h2::after {
   transform: scale(1.1); /* Slight hover effect */
   color: #f0f0f0;
 }
+
+.tech-stack {
+  margin-top: 10px;
+}
+
+.tech-stack strong {
+  display: block;
+  margin-bottom: 5px;
+  color: #ffffff;
+}
+
+.tech-stack ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.tech-stack li {
+  border: 1px solid #b1b1b1;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
+  font-size: 0.9rem;
+  color: #ffffff;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.tech-stack li::before {
+  margin-right: 5px;
+  color: #ffffff;
+}
