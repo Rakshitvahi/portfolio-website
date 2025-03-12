@@ -10,23 +10,9 @@
   background-color: #f8f9fa; /* White navbar */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
   border-radius: 30px;
-  max-width: 75%; /* Set maximum width */
+  width: auto; 
+  max-width: 45%; /* Set maximum width */
   margin: 0 auto;
-}
-
-/* Styling for the top-left name */
-.navbar-brand {
-  font-size: 1.5rem; /* Bigger font size */
-  font-weight: 700; /* Bold text */
-  color: #FAF9F6; /* White color */
-  letter-spacing: 2.5px; /* Slight spacing between letters */
-  text-transform: uppercase; /* All caps */
-  transition: color 0.3s ease; /* Smooth hover effect */
-  font-family: 'Montserrat', sans-serif;
-}
-.navbar-brand:hover {
-  color: #a9e4ec; /* Change color on hover to the accent color */
-  text-shadow: 0px 0px 10px rgba(0, 188, 212, 0.7); /* Subtle glowing effect */
 }
 
 .navbar-nav {
@@ -50,6 +36,11 @@
   border-bottom: 2px solid #a9e4ec; /* Underline effect */
 }
 
+.navbar-nav .nav-link.active {
+  color: #d0eaec; /* Change to white for active link */
+  border-bottom: 2px solid #a9e4ec; /* Underline effect for active link */
+}
+
 .navbar-toggler {
   border: none;
 } 
@@ -65,34 +56,6 @@
   position: sticky;
   top: 0;
   z-index: 999;
-}
-
-/* Responsive font sizes */
-@media (max-width: 992px) {
-  .navbar-brand {
-    font-size: 1.3rem;
-  }
-  .navbar-nav .nav-link {
-    font-size: 0.9rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .navbar-brand {
-    font-size: 1.2rem;
-  }
-  .navbar-nav .nav-link {
-    font-size: 0.8rem;
-  }
-}
-
-@media (max-width: 576px) {
-  .navbar-brand {
-    font-size: 1.2rem;
-  }
-  .navbar-nav .nav-link {
-    font-size: 0.7rem;
-  }
 }
 
 /* Smooth Scrolling */
@@ -118,69 +81,6 @@ body {
   padding: 0;
   background-attachment: fixed;
 }
-/* Hero Section */
-.hero {
-  background: url('assets/newBG3.png') no-repeat center center/cover;
-  position: relative;
-  height: 55vh; /* Adjusted height */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  text-transform: capitalize;
-  color: white;
-  padding: 20px;
-  border-bottom: 2px solid #00bcd4;
-}
-.hero-content {
-  position: absolute;
-  bottom: 10%; /* Adjust to move content vertically */
-  text-align: center;
-}
-.hero h3 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-  font-weight: 700;
-  letter-spacing: 2px;
-  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7); /* Adds shadow for text readability */
-  animation: fadeIn 1.5s ease-in-out;
-}
-.hero p {
-  font-size: 1.5rem;
-  font-weight: 400;
-  font-weight: bold;
-  color: #00bcd4;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-  animation: fadeIn 2s ease-in-out;
-}
-
-@media (max-width: 992px) {
-  .hero-content h3 {
-    font-size: 3vw;
-  }
-  .hero-content p {
-    font-size: 3vw;
-  }
-}
-
-@media (max-width: 768px) {
-  .hero-content h3 {
-    font-size: 3vw;
-  }
-  .hero-content p {
-    font-size: 3vw;
-  }
-}
-
-@media (max-width: 576px) {
-  .hero-content h3 {
-    font-size: 3vw;
-  }
-  .hero-content p {
-    font-size: 3vw;
-  }
-}
-/*-------------------------------------------------*/
 
 /* Section Headings */
 section h2 {
@@ -535,4 +435,64 @@ section h2::after {
 .tech-stack li::before {
   margin-right: 5px;
   color: #ffffff;
+}
+
+/* Main Section */
+.main-section {
+  padding: 20px 0;
+  min-height: 30vh;
+}
+
+.main-section h3 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7); /* Adds shadow for text readability */
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.main-section #typing-text {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: #00bcd4;
+  font-weight: 400;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  animation: fadeIn 2s ease-in-out;
+}
+
+.skills-item {
+  display: inline-flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skills-item i {
+  font-size: 2rem;
+  color: #00bcd4;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.skills-item i:hover {
+  transform: scale(1.2);
+  color: #0097a7;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%; /* Ensure the image is circular */
+  width: 300px; /* Set a fixed width */
+  height: 300px; /* Set a fixed height */
+  object-fit: cover; /* Ensure the image covers the area without distortion */
+}
+
+/* Horizontal Line */
+.cyan-line {
+  height: 7px;
+  background-color: #00bcd4; /* Cyan color */
+  width: 40%; /* Set the width to 40% of the page width */
+  margin: 40px auto; /* Center the line horizontally and add vertical margin */
 }
