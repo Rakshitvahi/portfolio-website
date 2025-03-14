@@ -10,14 +10,21 @@
   background-color: #f8f9fa; /* White navbar */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
   border-radius: 30px;
-  width: auto; 
-  max-width: 45%; /* Set maximum width */
+  width: 45vW; 
   margin: 0 auto;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .navbar {
+    width: 90vw; /* Adjust width for smaller screens */
+  }
 }
 
 .navbar-nav {
   display: flex;
   flex-wrap: wrap; /* Allow wrapping of nav items */
+  justify-content: center; /* Center the nav items */
 }
 
 .navbar-nav .nav-link {
