@@ -32,24 +32,28 @@ const data = {
     heading: "Work Experience",
     items: [
       {
+        title: "Software Engineer SDE 2",
+        description: "GE Healthcare",
+        details: "Engineered 15+ platform-level Java microservices using Spring Boot on AWS, forming the core backend infrastructure for multiple GE modalities. \n Containerized services with Docker, deployed via Kubernetes and Helm, and integrated Kafka and RabbitMQ for messaging. Led Agile sprints as Scrum Master, accelerating delivery by 30%.",
+        logo: "assets/GE.png"
+      },
+      {
+        title: "Software Engineering Specialist SDE 1",
+        description: "GE Healthcare",
+        details: "Migrated legacy monoliths to modular microservices with Go and Redis, improving system scalability and response times by 40%. \n Designed RESTful APIs with OpenAPI and ensured 90%+ test coverage using JUnit and Cucumber. Authored extensive technical documentation and onboarding guides, reducing ramp-up time by 60%.",
+        logo: "assets/GE.png"
+      },
+      {
         title: "Software Engineer",
-        description: "GE Healthcare",
-         details: "Built 15+ backend microservices using Java and RESTful APIs, reducing response times by 60%.\n Deployed systems with Docker and Kubernetes and automated CI/CD pipelines to cut build times by 80%. Led Agile sprints, improving timelines by 30%, and enhanced performance for healthcare systems."
-      },
-      {
-        title: "Software Engineering Specialist",
-        description: "GE Healthcare",
-        details: "Developed lightweight GoLang microservices, reducing response times by 40%. Achieved 90%+ code coverage with TDD, \nensuring reliability. Wrote 300+ integration tests, used design patterns for scalability, and authored detailed technical documentation to improve onboarding by 65%."
-      },
-      {
-        title: "Grduate Software Engineer",
         description: "Eka Software Solutions",
-        details: "Built robust software solutions for commodity management systems, enhancing performance \nand scalability."
+        details: "Conducted proof-of-concept for a full-stack application using Spring Boot, Angular, and PostgreSQL, validating architecture for future product initiatives. \n Developed Python scripts to automate deployment and testing workflows, reducing manual effort by 60%.",
+        logo: "assets/eka.jpg"
       },
       {
         title: "Software Engineer Intern",
         description: "CGI",
-        details: "Worked on real-time monitoring tools for enterprise applications, gaining hands-on experience in agile development."
+        details: "Worked as a full-stack developer to build an internal employee data management system using Angular and Java (Spring Boot) \n. Contributed to both frontend UI and backend logic to deliver a complete, functional application.",
+        logo: "assets/cgi.png"
       }
     ]
   },
@@ -59,12 +63,14 @@ const data = {
       {
         title: "Lead Graduate Teaching Assistant",
         description: "Northeastern University",
-        details: "Responsible for mentoring over 50 students in Operational Research, providing guidance on complex problem-solving, and evaluating assignments."
+        details: "Mentored over 50 students in Operations Research, offering support on optimization algorithms and problem-solving strategies. \n Reviewed assignments and facilitated deep understanding of analytical methods.",
+        logo: "assets/NEU.png"
       },
       {
         title: "Technical Specialist",
         description: "Northeastern University ITS",
-        details: "Developed automated workflows with Power Automate, reducing response times by 90%. Debugged 30+ Python and Java codebases \nto resolve compatibility issues and enhance student understanding, showcasing problem-solving skills and technical expertise"
+        details: "Developed automated workflows using Power Automate to pull data from ServiceNow APIs, cutting support response times by 90%. \n Debugged 90+ Python and Java codebases, improving student code quality and technical comprehension.",
+        logo: "assets/NEU.png"
       }
     ]
   },
@@ -73,15 +79,18 @@ const data = {
     items: [
       {
         title: "Master of Science in Engineering Management",
-        description: "Northeastern University"
+        description: "Northeastern University",
+        logo: "assets/NEU.png"
       },
       {
         title: "Bachelor of Engineering in Computer Science",
-        description: "PES University"
+        description: "PESIT (Visvesvaraya Technological University)",
+        logo: "assets/PES.png"
       }
     ]
   }
 };
+
 
 // Populate About Section
 //document.getElementById('about-heading').textContent = data.about.heading;
@@ -98,6 +107,7 @@ data.work.items.forEach(item => {
   workCard.innerHTML = `
     <div class="card mb-3">
       <div class="card-body">
+        <img src="${item.logo}" alt="${item.title} Logo" class="company-logo mb-3">
         <h5 class="card-title">${item.title}</h5>
         <p class="card-text">${item.description}</p>
         <div class="card-details">
@@ -139,9 +149,16 @@ data.partTimeWork.items.forEach(item => {
   partTimeCard.innerHTML = `
     <div class="card mb-3">
       <div class="card-body">
+        <img src="${item.logo}" alt="${item.title} Logo" class="company-logo mb-3">
         <h5 class="card-title">${item.title}</h5>
         <p class="card-text">${item.description}</p>
-        <!-- <p class="card-details">${item.details}</p> -->
+        <div class="card-details">
+        <p>${item.details.split('\n').slice(0, 1).join(' ')}
+          <span class="more-details" style="display: none;">
+            ${item.details.split('\n').slice(1).join(' ')}
+          </span></p>
+          <button class="read-more-btn">Read More</button>
+        </div>
       </div>
     </div>
   `;
@@ -159,6 +176,7 @@ data.education.items.forEach(item => {
   educationCard.innerHTML = `
     <div class="card mb-3">
       <div class="card-body">
+        <img src="${item.logo}" alt="${item.title} Logo" class="company-logo mb-3">
         <h5 class="card-title">${item.title}</h5>
         <p class="card-text">${item.description}</p>
       </div>

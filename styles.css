@@ -200,6 +200,13 @@ section h2::after {
   color: #f5df18; /* Change title color on hover */
 }
 
+.company-logo {
+  max-width: 150px; /* Adjust the size of the logo */
+  max-height: 75px; /* Maintain aspect ratio */
+  object-fit: contain; /* Ensure the logo fits within the bounds */
+  display: block;
+  margin: 0 auto; /* Center the logo */
+}
 
 #contact {
   padding: 30px 0;
@@ -502,4 +509,17 @@ section h2::after {
   background-color: #00bcd4; /* Cyan color */
   width: 40%; /* Set the width to 40% of the page width */
   margin: 40px auto; /* Center the line horizontally and add vertical margin */
+}
+
+footer .disclaimer {
+  font-size: 0.9rem; /* Slightly smaller font size */
+  color: #cccccc; /* Light gray text for subtle appearance */
+  margin-top: 10px;
+  line-height: 1.4;
+  font-style: normal; /* Ensure the text is not italic */
+}
+
+footer .disclaimer strong {
+  color: #ffffff; /* Make key words white for emphasis */
+  font-weight: bold; /* Bold the key words */
 }
