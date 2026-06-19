@@ -33,7 +33,7 @@ const data = {
     items: [
       {
         title: "Software Engineer",
-        description: "Meta Platforms, Burlingame, USA",
+        description: "Meta",
         details: "Designed and shipped a crash-safe connectivity log system with dual-gated rollout, automatic file trimming, log persistence and session merging; deployed to 100% of public users with zero regressions \n Diagnosed and resolved 15+ critical production defects for flagship wearable devices through deep log analysis, directly improving user stability metrics and shipping fixes through multi-phase GK rollouts with monitoring \n Built an AI-powered automated triage system using MyClaw with a Python dashboard for real-time visibility; processing production bugs nightly with high-confidence classification, reducing manual effort by 80% \n Designed and implemented a configurable JNI exception handling system for native-to-managed code transitions in the data transport layer, executing a 3-phase production rollout with monitoring \n Contributed new skills and optimized existing capabilities within a 63-skill AI engineering productivity plugin; improving automated code review accuracy, triage classification logic, and diagnostic workflows across Android and iOS connectivity \n Architected a Python-based E2E emulator test framework from scratch, automating device provisioning, pairing, and transport validation across BLE, BTC, and WiFi",
         logo: "assets/meta.png"
       },
