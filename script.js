@@ -1,5 +1,5 @@
 // Typing Effect
-const texts = ["an Android Engineer", "a Connectivity Engineer", "a Wearables Software Engineer"];
+const texts = ["a Java & Go Engineer", "an Android & Connectivity Engineer", "a Cloud & Backend Developer"];
 let count = 0;
 let index = 0;
 let currentText = "";
