@@ -137,6 +137,14 @@ section h2::after {
   flex-grow: 1;
 }
 
+.card-date {
+  font-size: 0.8rem;
+  color: #00bcd4;
+  margin: 2px 0 8px 0;
+  letter-spacing: 0.5px;
+  font-style: italic;
+}
+
 .card-details {
   font-size: 0.9rem;
   color: #cccccc; /* Subtle gray for the details text */
@@ -321,7 +329,7 @@ section h2::after {
   font-size: 2rem; /* Icon size */
   text-align: center;
   transition: transform 0.3s ease, color 0.3s ease;
-  animation: pop-up 1s ease infinite;
+  animation: pop-up 1s ease 3;
 }
 
 .social-icon:hover {

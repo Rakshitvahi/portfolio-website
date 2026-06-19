@@ -1,5 +1,5 @@
 // Typing Effect
-const texts = ["a Backend Developer", "a Java Expert", "a RESTful API Developer"];
+const texts = ["an Android Engineer", "a Connectivity Engineer", "a Wearables Software Engineer"];
 let count = 0;
 let index = 0;
 let currentText = "";
@@ -24,40 +24,41 @@ let letter = "";
 
 // Embedded JSON data
 const data = {
-  about: {
-    heading: "About Me",
-    content: "I am a passionate Software Engineer and Product Manager in training with experience in Agile methodologies, backend development, and CI/CD automation."
-  },
   work: {
     heading: "Work Experience",
     items: [
       {
         title: "Software Engineer",
         description: "Meta",
+        date: "Jun 2025 – Present",
         details: "Building Android connectivity software for Meta's flagship wearable devices, shipping production features across BLE, BTC, and WiFi transport layers with phased rollouts and real-time monitoring. \n Developed AI-powered bug triage tooling and a Python-based E2E emulator test framework to automate device provisioning, pairing, and connectivity validation.",
         logo: "assets/meta.png"
       },
       {
         title: "Software Engineer SDE 2",
         description: "GE Healthcare",
+        date: "Oct 2021 – Jul 2022",
         details: "Engineered 15+ platform-level Java microservices using Spring Boot on AWS, forming the core backend infrastructure for multiple GE modalities. \n Containerized services with Docker, deployed via Kubernetes and Helm, and integrated Kafka and RabbitMQ for messaging. Led Agile sprints as Scrum Master, accelerating delivery by 30%.",
         logo: "assets/GE.png"
       },
       {
         title: "Software Engineering Specialist SDE 1",
         description: "GE Healthcare",
+        date: "Sep 2019 – Oct 2021",
         details: "Migrated legacy monoliths to modular microservices with Go and Redis, improving system scalability and response times by 40%. \n Designed RESTful APIs with OpenAPI and ensured 90%+ test coverage using JUnit and Cucumber. Authored extensive technical documentation and onboarding guides, reducing ramp-up time by 60%.",
         logo: "assets/GE.png"
       },
       {
         title: "Software Engineer",
         description: "Eka Software Solutions",
+        date: "Jul 2019 – Sep 2019",
         details: "Conducted proof-of-concept for a full-stack application using Spring Boot, Angular, and PostgreSQL, validating architecture for future product initiatives. \n Developed Python scripts to automate deployment and testing workflows, reducing manual effort by 60%.",
         logo: "assets/eka.jpg"
       },
       {
         title: "Software Engineer Intern",
         description: "CGI",
+        date: "Jan 2019 – Mar 2019",
         details: "Worked as a full-stack developer to build an internal employee data management system using Angular and Java (Spring Boot) \n. Contributed to both frontend UI and backend logic to deliver a complete, functional application.",
         logo: "assets/cgi.png"
       }
@@ -98,10 +99,6 @@ const data = {
 };
 
 
-// Populate About Section
-//document.getElementById('about-heading').textContent = data.about.heading;
-//document.getElementById('about-content').textContent = data.about.content;
-
 // Populate Work Experience Section
 const workHeading = document.getElementById('work-heading');
 const workContainer = document.getElementById('work-container');
@@ -116,6 +113,7 @@ data.work.items.forEach(item => {
         <img src="${item.logo}" alt="${item.title} Logo" class="company-logo mb-3">
         <h5 class="card-title">${item.title}</h5>
         <p class="card-text">${item.description}</p>
+        <p class="card-date">${item.date}</p>
         <div class="card-details">
         <p>${item.details.split('\n').slice(0, 1).join(' ')}
           <span class="more-details" style="display: none;">
@@ -202,7 +200,6 @@ const skillsData = {
         { name: "Python", iconClass: "devicon-python-plain colored" },
         { name: "Go Lang", iconClass: "devicon-go-plain colored" },
         { name: "Spring Framework", iconClass: "devicon-spring-plain colored" },
-        { name: "Docker", iconClass: "devicon-docker-plain colored" },
         { name: "Jenkins", iconClass: "devicon-jenkins-plain colored" },
         { name: "Git", iconClass: "devicon-git-plain colored" },
         { name: "Maven", imagePath: "assets/maven.svg" }
@@ -325,17 +322,13 @@ skillsData.categories.forEach(category => {
       .then(response => response.json())
       .then(data => {
         const reposWithDescription = [];
-        const reposWithoutDescription = [];
         data.forEach(repo => {
           if (repo.description) {
             reposWithDescription.push(repo);
-          } else {
-            reposWithoutDescription.push(repo);
           }
         });
-        const allRepos = [...reposWithDescription, ...reposWithoutDescription];
 
-        allRepos.forEach(repo => {
+        reposWithDescription.forEach(repo => {
           fetch(repo.languages_url)
             .then(response => response.json())
             .then(languages => {
